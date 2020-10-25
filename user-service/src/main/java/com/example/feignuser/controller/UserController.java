@@ -20,7 +20,7 @@ public class UserController {
 	OrderClient orderClient;
 	
 	@GetMapping("/test")
-	public String getUserOrders() {
+	public String test() {
 
 		return "Success";
 
