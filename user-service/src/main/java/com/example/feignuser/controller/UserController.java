@@ -19,6 +19,13 @@ public class UserController {
 	@Autowired
 	OrderClient orderClient;
 	
+	@GetMapping("/test")
+	public String getUserOrders() {
+
+		return "Success";
+
+	}
+	
 	@GetMapping("")
 	public List<Order> getUserOrders() {
 
