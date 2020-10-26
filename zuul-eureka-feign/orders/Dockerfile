@@ -4,5 +4,5 @@ COPY *.jar order-server.jar
 
 EXPOSE 8082
 
-ENTRYPOINT ["java", "-Deureka.client.serviceUrl.defaultZone = http://18.224.55.121/eureka/", "-jar", "order-server.jar"]
+ENTRYPOINT ["java", "-Deureka.client.serviceUrl.defaultZone = http://3.138.134.159/eureka/", "-jar", "order-server.jar"]
 
