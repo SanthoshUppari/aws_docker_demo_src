@@ -1,8 +1,8 @@
 FROM openjdk:latest
 
-COPY *.jar springboothello.jar
+COPY *.jar order-service.jar
 
 EXPOSE 8081
 
-ENTRYPOINT ["java", "-jar", "springboothello.jar"]
+ENTRYPOINT ["java", "-jar", "order-service.jar"]
 

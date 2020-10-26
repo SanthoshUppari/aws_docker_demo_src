@@ -1,8 +1,8 @@
 FROM openjdk:latest
 
-COPY *.jar springboothello.jar
+COPY *.jar springboot-eureka.jar
 
-EXPOSE 80
+EXPOSE 8761
 
-ENTRYPOINT ["java", "-jar", "springboothello.jar"]
+ENTRYPOINT ["java", "-jar", "springboot-eureka.jar"]
 
