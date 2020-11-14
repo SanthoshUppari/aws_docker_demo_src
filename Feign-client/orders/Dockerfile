@@ -2,7 +2,7 @@ FROM openjdk:latest
 
 COPY *.jar springboothello.jar
 
-EXPOSE 80
+EXPOSE 8082
 
 ENTRYPOINT ["java", "-jar", "springboothello.jar"]
 

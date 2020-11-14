@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.feignuser.dto.Order;
 
-//@FeignClient(value="order-service", url="http://localhost:8081/demo/orders")
-@FeignClient(name="http://ORDER-SERVICE/demo/orders")
+@FeignClient(value="order-service", url="http://ORDER-SERVICE:8081/demo/orders") /* ORDER-SERVICE - is container name of order service */
+//@FeignClient(name="http://ORDER-SERVICE/demo/orders")
 public interface OrderClient {
 	
 	@GetMapping("")
