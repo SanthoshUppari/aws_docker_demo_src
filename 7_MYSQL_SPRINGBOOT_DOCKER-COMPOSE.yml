@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+	USER-SERVICE :
+		image: user
+		container_name: USER-SERVICE
+		links:
+				- "ORDER-SERVICE"
+		ports:
+			- 8081:8081
+	ORDER-SERVICE :
+		image: order
+		container_name: ORDER-SERVICE
