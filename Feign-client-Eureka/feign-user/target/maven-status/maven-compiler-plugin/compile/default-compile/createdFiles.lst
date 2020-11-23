@@ -1,0 +1,4 @@
+com/example/feignuser/FeignUserApplication.class
+com/example/feignuser/controller/UserController.class
+com/example/feignuser/feignclient/OrderClient.class
+com/example/feignuser/dto/Order.class

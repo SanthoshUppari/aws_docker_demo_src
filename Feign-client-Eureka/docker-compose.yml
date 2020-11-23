@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+        EUREKA-SERVER:
+                image: eureka
+                links:
+                        - "ORDER-SERVICE"
+                        - "USER-SERVICE"
+                ports:
+                        - "8761:8761"
+        USER-SERVICE:
+                image: user
+                links:
+                        - "ORDER-SERVICE"
+                ports:
+                        - "8081:8081"
+        ORDER-SERVICE:
+                image: order
+
