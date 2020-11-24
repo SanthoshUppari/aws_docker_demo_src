@@ -1,19 +1,15 @@
 version: '3.8'
 
 services:
-        EUREKA-SERVER:
-                image: eureka
+        JWT-SERVICE:
+                image: sb-jwt
                 links:
-                        - "ORDER-SERVICE"
-                        - "USER-SERVICE"
+                        - "mysql-server"
                 ports:
-                        - "8761:8761"
-        USER-SERVICE:
-                image: user
-                links:
-                        - "ORDER-SERVICE"
-                ports:
-                        - "8081:8081"
-        ORDER-SERVICE:
-                image: order
+                        - "8083:8083"
+        mysql-server:
+                image: mysql
+                environment:
+                        - MYSQL_DATABASE=jwt_test
+                        - MYSQL_ROOT_PASSWORD=root
 
