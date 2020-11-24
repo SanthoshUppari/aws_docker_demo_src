@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+        USER-SERVICE:
+                image: user
+                links:
+                        - "ORDER-SERVICE"
+                ports:
+                        - "8081:8081"
+        ORDER-SERVICE:
+                image: order
+
