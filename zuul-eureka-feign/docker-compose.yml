@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
         USK-GATEWAY:
-                image: gateway
+                image: usksanthu/gateway
                 links:
                         - "ORDER-SERVICE"
                         - "USER-SERVICE"
@@ -10,7 +10,7 @@ services:
                 ports:
                         - "2020:2020"
         EUREKA-SERVER:
-                image: eureka
+                image: usksanthu/eureka
                 links:
                         - "ORDER-SERVICE"
                         - "USER-SERVICE"
@@ -18,9 +18,9 @@ services:
                 ports:
                         - "8761:8761"
         USER-SERVICE:
-                image: user
+                image: usksanthu/user
                 links:
                         - "ORDER-SERVICE"
         ORDER-SERVICE:
-                image: order
+                image: usksanthu/order
 
