@@ -16,7 +16,7 @@ services:
                         - "USER-SERVICE"
                         - "USK-GATEWAY"
                 ports:
-                        - "8083:8761"
+                        - "8761:8761"
         USER-SERVICE:
                 image: user2
                 links:
