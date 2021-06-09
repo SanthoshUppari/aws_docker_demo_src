@@ -8,7 +8,7 @@ services:
                         - "USER-SERVICE"
                         - "EUREKA-SERVER"
                 ports:
-                        - "2020:2020"
+                        - "7777:7777"
         EUREKA-SERVER:
                 image: eureka2
                 links:
@@ -21,6 +21,8 @@ services:
                 image: user2
                 links:
                         - "ORDER-SERVICE"
+                ports:
+                        - "8081:8081"
         ORDER-SERVICE:
                 image: order2
 
