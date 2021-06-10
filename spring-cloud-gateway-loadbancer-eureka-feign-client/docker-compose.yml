@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
         USK-GATEWAY:
-                image: usksanthu/gateway2
+                image: usksanthu/gateway3
                 ports:
-                        - "7777:7777"
+                        - "2020:2020"
         EUREKA-SERVER:
                 image: usksanthu/eureka2
                 ports:
