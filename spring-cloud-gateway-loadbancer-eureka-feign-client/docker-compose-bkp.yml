@@ -3,14 +3,24 @@ version: '3.8'
 services:
         USK-GATEWAY:
                 image: usksanthu/gateway2
+                links:
+                        - "ORDER-SERVICE"
+                        - "USER-SERVICE"
+                        - "EUREKA-SERVER"
                 ports:
                         - "7777:7777"
         EUREKA-SERVER:
                 image: usksanthu/eureka2
+                links:
+                        - "ORDER-SERVICE"
+                        - "USER-SERVICE"
+                        - "USK-GATEWAY"
                 ports:
                         - "8761:8761"
         USER-SERVICE:
                 image: usksanthu/user2
+                links:
+                        - "ORDER-SERVICE"
                 ports:
                         - "8081:8081"
         ORDER-SERVICE:
