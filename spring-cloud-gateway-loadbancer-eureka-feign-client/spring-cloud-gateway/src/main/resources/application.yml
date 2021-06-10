@@ -15,7 +15,7 @@ spring:
     gateway:
       routes:
       - id: user
-        uri: lb://order-service
+        uri: lb://user-service
         predicates:
         - Path=/order/**
       - id: order
