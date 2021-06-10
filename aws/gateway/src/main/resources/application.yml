@@ -1,0 +1,18 @@
+server:
+  port: 8888
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+     
+spring:
+  application:
+    name: usk-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: user
+        uri: lb://user-service
+        predicates:
+        - Path=/user/**

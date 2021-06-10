@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+        USK-GATEWAY:
+                image: gateway
+                ports:
+                        - "8888:8888"
+        EUREKA-SERVER:
+                image: eureka
+                ports:
+                        - "8761:8761"
+        USER-SERVICE:
+                image: user
+                ports:
+                        - "8081:8081"
