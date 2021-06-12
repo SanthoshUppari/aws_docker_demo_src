@@ -5,6 +5,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server:8761/eureka
+  instance:
+    prefer-ip-address: true    
      
 spring:
   application:
@@ -13,6 +15,8 @@ spring:
     gateway:
       routes:
       - id: user
-        uri: http://localhost:8081
+        uri: lb://user-service
         predicates:
         - Path=/user/**
+    loadbalancer:
+      enabled: false
